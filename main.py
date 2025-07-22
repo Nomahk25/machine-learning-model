@@ -2,7 +2,6 @@ import numpy as np
 import pickle
 import pandas as pd
 
-# Load model
 with open('models/model.pkl', 'rb') as f:
     model = pickle.load(f)
 
@@ -12,7 +11,6 @@ attendance = float(input("Enter attendance percentage: "))
 prev_score = float(input("Enter previous exam score: "))
 extra = int(input("Participates in extracurricular activities? (1 for Yes, 0 for No): "))
 
-# Convert to DataFrame to include feature names
 input_data = pd.DataFrame([{
     "hours_studied": hours,
     "attendance": attendance,
